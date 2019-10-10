@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Edit from "./Edit";
+import "./ViewRequests.css";
 import axios from "axios";
 
 class ViewRequests extends Component {
@@ -32,12 +33,7 @@ class ViewRequests extends Component {
         <Edit element={element} updateAllRequests={this.updateAllRequests} />
       );
     });
-    return (
-      <div>
-        <h1>VIEW REQUESTS</h1>
-        {mappedEditList}
-      </div>
-    );
+    return <div className="RequestList">{mappedEditList}</div>;
   }
 }
 

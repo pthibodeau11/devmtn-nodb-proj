@@ -1,6 +1,6 @@
 let editList = [
   {
-    id: 1,
+    id: 0,
     status: "NEW",
     name: "Pat Thibodeau",
     email: "patrick.thibodeau@gmail.com",
@@ -11,7 +11,7 @@ let editList = [
   }
 ];
 
-let id = 2;
+let id = 1;
 let status = "NEW";
 let afterURL = "";
 
@@ -37,8 +37,8 @@ function addEdit(req, res) {
 function removeEdit(req, res) {
   const { id } = req.params;
   console.log(id);
-  const index = editList.findIndex(val => {
-    if (val.id == id) {
+  const index = editList.findIndex(element => {
+    if (element.id == id) {
       return true;
     }
   });

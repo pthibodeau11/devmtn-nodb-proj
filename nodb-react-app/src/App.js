@@ -42,17 +42,17 @@ class App extends Component {
             EDIT PHOTO
           </button>
         </nav>
-        {/* <Scrollbars style={{ width: 500, height: 300 }}> */}
         <main className="Body">
-          {this.state.currentPage === "submit" ? (
-            <NewRequest />
-          ) : this.state.currentPage === "list" ? (
-            <ViewRequests />
-          ) : this.state.currentPage === "edit" ? (
-            <Edit />
-          ) : null}
+          <Scrollbars style={{ width: 1000, height: 650 }}>
+            {this.state.currentPage === "submit" ? (
+              <NewRequest />
+            ) : this.state.currentPage === "list" ? (
+              <ViewRequests />
+            ) : this.state.currentPage === "edit" ? (
+              <Edit />
+            ) : null}
+          </Scrollbars>
         </main>
-        {/* </Scrollbars> */}
         <div className="Footer">
           <Footer />
         </div>

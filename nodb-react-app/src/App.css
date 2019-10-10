@@ -4,7 +4,8 @@
   align-items: center;
   height: 100vh;
   font-family: "Roboto", sans-serif;
-  /* background-simage: url("./images/mosaic-background-blue.jpg"); */
+  /* background-image: url("./images/mosaic-background-blue.jpg"); */
+  background-color: #455560;
 }
 
 .Header {
@@ -42,10 +43,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 700px;
+  align-content: center;
+  /* height: 700px; */
   width: 100%;
   border-top: solid 1px white;
   background-color: #455560;
+  /* opacity: 0.75; */
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .Footer {
@@ -54,10 +59,11 @@
   border-top: solid 1px white;
   background-color: #f39a2f;
   justify-content: center;
-  /* position: absolute; */
+  position: fixed;
   bottom: 0;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  color: white;
 }
 
 @font-face {

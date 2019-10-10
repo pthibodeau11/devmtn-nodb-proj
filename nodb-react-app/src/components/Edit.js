@@ -9,7 +9,7 @@ class Edit extends Component {
   }
 
   deleteEdit = () => {
-    axios.delete(`/api/travel${this.props.element.id}`).then(response => {
+    axios.delete(`/api/list/${this.props.element.id}`).then(response => {
       console.log(response.data);
       this.props.updateAllRequests(response.data);
     });
@@ -28,15 +28,21 @@ class Edit extends Component {
     return (
       <div className="Edit">
         <section className="Left">
-          <ul>{name}</ul>
-          <img className="Image" src={beforeURL} />
-          <ul>{status}</ul>
+          <ul>Submitted by: {name}</ul>
+          <div className="FixedImgSize">
+            <img className="Image" src={beforeURL} />
+          </div>
+          <ul>Status: {status}</ul>
         </section>
         <section className="Right">
           <ul>{comment}</ul>
           <ul>{afterURL}</ul>
           <ul>{email}</ul>
-          <button onClick={this.deleteEdit}>DELETE</button>
+        </section>
+        <section className="Button-Sec">
+          <button className="Delete-button" onClick={this.deleteEdit}>
+            X
+          </button>
         </section>
       </div>
     );
