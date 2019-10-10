@@ -4,6 +4,7 @@
   align-items: center;
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  /* background-simage: url("./images/mosaic-background-blue.jpg"); */
 }
 
 .Header {
@@ -18,7 +19,7 @@
   display: flex;
   width: 100%;
   height: 50px;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #f39a2f;
   align-items: center;
 }
@@ -29,7 +30,7 @@
   background-color: transparent;
   border: none;
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 12px;
   /* font-weight: 100; */
   color: white;
   -webkit-font-smoothing: antialiased;
@@ -43,19 +44,20 @@
   align-items: center;
   height: 700px;
   width: 100%;
-  border-top: solid 2px white;
+  border-top: solid 1px white;
   background-color: #455560;
 }
 
 .Footer {
   display: flex;
   width: 100%;
-  border-top: solid 2px white;
+  border-top: solid 1px white;
   background-color: #f39a2f;
   justify-content: center;
   /* position: absolute; */
   bottom: 0;
   font-family: "Roboto", sans-serif;
+  font-size: 12px;
 }
 
 @font-face {

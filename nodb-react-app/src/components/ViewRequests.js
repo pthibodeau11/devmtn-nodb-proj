@@ -1,6 +1,14 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class ViewRequests extends Component {
+  constructor() {
+    super();
+    this.state = {
+      allRequests: []
+    };
+  }
+
   render() {
     return (
       <div>

@@ -1,3 +1,10 @@
-.img {
-  width: 50%;
+.Main {
+  display: flex;
+  justify-content: center;
+}
+
+.Logo {
+  width: 40%;
+  justify-content: center;
+  margin-left: 15px;
 }

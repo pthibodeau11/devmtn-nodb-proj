@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./Header.css";
+import Logo from "../images/Mosaic-Logo.png";
 
 class Header extends Component {
   render() {
     return (
-      <header>
-        <h1>**logo**</h1>
-        {/* <img src="./Mosaic-Logo.png" alt="logo_img" />; */}
-      </header>
+      <div className="Main">
+        <img className="Logo" src={Logo} />
+      </div>
     );
   }
 }
