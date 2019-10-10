@@ -5,7 +5,8 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <img src="./Mosaic-Logo.png" alt="logo_img" />;
+        <h1>**logo**</h1>
+        {/* <img src="./Mosaic-Logo.png" alt="logo_img" />; */}
       </header>
     );
   }

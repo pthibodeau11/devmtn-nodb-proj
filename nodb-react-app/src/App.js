@@ -5,6 +5,7 @@ import ViewRequests from "./components/ViewRequests";
 import Edit from "./components/Edit";
 import Footer from "./components/Footer";
 import "./App.css";
+import { Scrollbars } from "react-custom-scrollbars";
 import { thisTypeAnnotation } from "@babel/types";
 
 class App extends Component {
@@ -22,16 +23,26 @@ class App extends Component {
           <Header />
         </div>
         <nav className="Nav">
-          <button onClick={() => this.setState({ currentPage: "submit" })}>
-            Make New Request
+          <button
+            className="Button"
+            onClick={() => this.setState({ currentPage: "submit" })}
+          >
+            NEW REQUEST
           </button>
-          <button onClick={() => this.setState({ currentPage: "list" })}>
-            View Edit List
+          <button
+            className="Button"
+            onClick={() => this.setState({ currentPage: "list" })}
+          >
+            VIEW EDIT LIST
           </button>
-          <button onClick={() => this.setState({ currentPage: "edit" })}>
-            Edit Photo
+          <button
+            className="Button"
+            onClick={() => this.setState({ currentPage: "edit" })}
+          >
+            EDIT PHOTO
           </button>
         </nav>
+        {/* <Scrollbars style={{ width: 500, height: 300 }}> */}
         <main className="Body">
           {this.state.currentPage === "submit" ? (
             <NewRequest />
@@ -41,6 +52,7 @@ class App extends Component {
             <Edit />
           ) : null}
         </main>
+        {/* </Scrollbars> */}
         <div className="Footer">
           <Footer />
         </div>
