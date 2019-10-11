@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
+import Gallery from "./components/Gallery";
 import NewRequest from "./components/NewRequest";
 import ViewRequests from "./components/ViewRequests";
-import Edit from "./components/Edit";
 import Footer from "./components/Footer";
 import "./App.css";
 import { Scrollbars } from "react-custom-scrollbars";
@@ -25,6 +25,12 @@ class App extends Component {
         <nav className="Nav">
           <button
             className="Button"
+            onClick={() => this.setState({ currentPage: "gallery" })}
+          >
+            PHOTO GALLERY
+          </button>
+          <button
+            className="Button"
             onClick={() => this.setState({ currentPage: "submit" })}
           >
             NEW REQUEST
@@ -35,12 +41,6 @@ class App extends Component {
           >
             VIEW EDIT LIST
           </button>
-          <button
-            className="Button"
-            onClick={() => this.setState({ currentPage: "edit" })}
-          >
-            EDIT PHOTO
-          </button>
         </nav>
         <main className="Body">
           <Scrollbars style={{ width: 1000, height: 650 }}>
@@ -48,8 +48,8 @@ class App extends Component {
               <NewRequest />
             ) : this.state.currentPage === "list" ? (
               <ViewRequests />
-            ) : this.state.currentPage === "edit" ? (
-              <Edit />
+            ) : this.state.currentPage === "gallery" ? (
+              <Gallery />
             ) : null}
           </Scrollbars>
         </main>

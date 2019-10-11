@@ -38,6 +38,12 @@ class Edit extends Component {
           <ul>{comment}</ul>
           <ul>{afterURL}</ul>
           <ul>{email}</ul>
+          <a
+            href={`https://www.ribbet.com/app/?_import=${beforeURL}&_export=EXPORT_URL &_exclude=out,home,share& _export_title=SAVE_BUTTON_TITLE &_export_agent=browser&embed=true`}
+            target="popup"
+          >
+            EDIT PHOTO
+          </a>
         </section>
         <section className="Button-Sec">
           <button className="Delete-button" onClick={this.deleteEdit}>
