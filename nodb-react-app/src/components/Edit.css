@@ -21,7 +21,7 @@
   max-height: 90%;
   max-width: 90%;
   margin: 0;
-  margin-left: 30px;
+  margin-left: 10px;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
@@ -35,13 +35,18 @@
 }
 
 .FixedImgSize {
-  width: 300px;
-  height: 200px;
+  width: 450px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Image {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 95%;
+  max-height: 95%;
+  box-shadow: 7px 10px 12px -5px rgb(0, 0, 0, 0.56);
+  border-radius: 5px;
 }
 
 .Button-Sec {

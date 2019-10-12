@@ -30,10 +30,19 @@ class ViewRequests extends Component {
   render() {
     let mappedEditList = this.state.allRequests.map(element => {
       return (
-        <Edit element={element} updateAllRequests={this.updateAllRequests} />
+        <div>
+          <Edit element={element} updateAllRequests={this.updateAllRequests} />
+        </div>
       );
     });
-    return <div className="RequestList">{mappedEditList}</div>;
+    return (
+      <div>
+        <h1 className="Step-3">STEP 3:</h1>
+        <h2 className="Sit-Back">SIT BACK AND RELAX!</h2>
+        <h3 className="Rest">(We'll take it from here)</h3>
+        <div className="RequestList">{mappedEditList}</div>
+      </div>
+    );
   }
 }
 

@@ -131,6 +131,111 @@ class Image extends Component {
             Math.random() * (1000 - 1) + 1
           )}/367/267`}
           alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
+        />,
+        <img
+          className="Image"
+          src={`https://picsum.photos/id/${Math.floor(
+            Math.random() * (1000 - 1) + 1
+          )}/367/267`}
+          alt={""}
         />
       ]
     };
@@ -139,7 +244,11 @@ class Image extends Component {
   render() {
     return (
       <div className="Gallery-Body">
-        <h1 className="Gallery-Header">Need some inspiration?</h1>
+        <h1 className="Step">STEP 1:</h1>
+        <h2 className="Gallery-Header">CHOOSE A PHOTO</h2>
+        <h6 className="Gallery-Subheader">
+          (remember to right-click > copy image address)
+        </h6>
         <div className="Images-Grid">{this.state.images}</div>
       </div>
     );

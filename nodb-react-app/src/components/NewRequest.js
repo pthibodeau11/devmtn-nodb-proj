@@ -58,44 +58,48 @@ class NewRequest extends Component {
 
   render() {
     return (
-      <form className="Submit-form">
-        <input
-          className="Input-field"
-          type="text"
-          placeholder="Name"
-          onChange={this.handleNameChange}
-          value={this.state.name}
-        />
-        <input
-          className="Input-field"
-          type="text"
-          placeholder="Email"
-          onChange={this.handleEmailChange}
-          value={this.state.email}
-        />
-        <input
-          className="Input-field"
-          type="text"
-          placeholder="Image URL"
-          onChange={this.handleBeforeURLChange}
-          value={this.state.beforeURL}
-        />
-        <textarea
-          className="Input-field-desc"
-          type="text"
-          placeholder="What would you like done to your photo?"
-          onChange={this.handleCommentChange}
-          value={this.state.comment}
-        />
-        <div className="Request-Buttons">
-          <button className="Form-Button" onClick={this.handleClick}>
-            submit
-          </button>
-          <button className="Form-Button" onClick={this.clearForm}>
-            reset
-          </button>
-        </div>
-      </form>
+      <div>
+        <h1 className="Step-2">STEP 2:</h1>
+        <h2 className="Enter-Details">GIVE US THE DEETS</h2>
+        <form className="Submit-form">
+          <input
+            className="Input-field"
+            type="text"
+            placeholder="Name"
+            onChange={this.handleNameChange}
+            value={this.state.name}
+          />
+          <input
+            className="Input-field"
+            type="text"
+            placeholder="Email"
+            onChange={this.handleEmailChange}
+            value={this.state.email}
+          />
+          <input
+            className="Input-field"
+            type="text"
+            placeholder="Image URL"
+            onChange={this.handleBeforeURLChange}
+            value={this.state.beforeURL}
+          />
+          <textarea
+            className="Input-field-desc"
+            type="text"
+            placeholder="What would you like done to your photo?"
+            onChange={this.handleCommentChange}
+            value={this.state.comment}
+          />
+          <div className="Request-Buttons">
+            <button className="Form-Button" onClick={this.handleClick}>
+              submit
+            </button>
+            <button className="Form-Button" onClick={this.clearForm}>
+              reset
+            </button>
+          </div>
+        </form>
+      </div>
     );
   }
 }

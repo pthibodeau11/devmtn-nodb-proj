@@ -53,23 +53,23 @@ class Edit extends Component {
     return (
       <div className="Edit">
         <section className="Left">
-          <ul>Submitted by: {name}</ul>
           <div className="FixedImgSize">
             <img className="Image" src={beforeURL} />
           </div>
-          <ul>Status: {status}</ul>
         </section>
         <section className="Right">
+          <ul>status: {status}</ul>
+          <ul>Submitted by: {name}</ul>
           <ul>{comment}</ul>
           <ul>{this.state.afterURL}</ul>
           <ul>{email}</ul>
           <a
-            href={`https://www.ribbet.com/app/?_import=${this.state.highRes}&_export=EXPORT_URL &_exclude=out,home,share& _export_title=SAVE_BUTTON_TITLE &_export_agent=browser&embed=true`}
+            href={`https://www.ribbet.com/app/?_import=${this.state.highRes} &_export=EXPORT_URL&_exclude=out,home,share &_export_title=SAVE_BUTTON_TITLE &_export_agent=browser&embed=true`}
             target="popup"
           >
             EDIT PHOTO
           </a>
-          <a href={`${this.state.highRes}` + ".jpg"} download>
+          <a href={`${this.state.highRes}` + ".jpg"} target="popup">
             VIEW HIGH-RES
           </a>
         </section>
