@@ -6,7 +6,7 @@ let editList = [
     email: "patrick.thibodeau@gmail.com",
     beforeURL:
       "https://images.unsplash.com/photo-1516724562728-afc824a36e84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
-    afterURL: "",
+    afterURL: "insert after URL here",
     comment: "Make this photo awesome!"
   }
 ];
@@ -46,8 +46,27 @@ function removeEdit(req, res) {
   res.status(200).json(editList);
 }
 
+function updateEdit(req, res) {
+  const { afterURL } = req.body;
+  const updateID = req.params.id;
+  const index = editList.findIndex(element => element.id == updateID);
+  let edit = editList[index];
+
+  editList[index] = {
+    id: edit.id,
+    status: edit.status,
+    afterURL: afterURL || edit.afterURL,
+    name: edit.name,
+    email: edit.email,
+    beforeURL: edit.beforeURL,
+    comment: edit.comment
+  };
+  res.status(200).json(editList);
+}
+
 module.exports = {
   viewEdits,
   addEdit,
-  removeEdit
+  removeEdit,
+  updateEdit
 };

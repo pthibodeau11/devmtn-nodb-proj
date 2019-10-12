@@ -1,11 +1,31 @@
 import React, { Component } from "react";
 import axios from "axios";
+import EditURL from "./EditURL";
 import "./Edit.css";
 
 class Edit extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      afterURL: "",
+      // infoURL: this.props.element.beforeURL.replace("367/267", "info"),
+      highRes: ""
+    };
+
+    // this.updateEdit = this.updateEdit.bind(this);
+  }
+  // let infoURL = beforeURL.replace("367/267", "info");
+
+  componentDidMount() {
+    axios
+      .get(`${this.props.element.beforeURL.replace("367/267", "info")}`)
+      .then(response => {
+        console.log(response.data.download_url);
+        this.setState({ highRes: response.data.download_url });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   deleteEdit = () => {
@@ -15,6 +35,10 @@ class Edit extends Component {
     });
   };
 
+  handleChange = event => {
+    this.setState({ afterURL: event.target.value });
+  };
+
   render() {
     const {
       name,
@@ -22,7 +46,8 @@ class Edit extends Component {
       status,
       comment,
       afterURL,
-      email
+      email,
+      id
     } = this.props.element;
 
     return (
@@ -36,19 +61,38 @@ class Edit extends Component {
         </section>
         <section className="Right">
           <ul>{comment}</ul>
-          <ul>{afterURL}</ul>
+          <ul>{this.state.afterURL}</ul>
           <ul>{email}</ul>
           <a
-            href={`https://www.ribbet.com/app/?_import=${beforeURL}&_export=EXPORT_URL &_exclude=out,home,share& _export_title=SAVE_BUTTON_TITLE &_export_agent=browser&embed=true`}
+            href={`https://www.ribbet.com/app/?_import=${this.state.highRes}&_export=EXPORT_URL &_exclude=out,home,share& _export_title=SAVE_BUTTON_TITLE &_export_agent=browser&embed=true`}
             target="popup"
           >
             EDIT PHOTO
+          </a>
+          <a href={`${this.state.highRes}` + ".jpg"} download>
+            VIEW HIGH-RES
           </a>
         </section>
         <section className="Button-Sec">
           <button className="Delete-button" onClick={this.deleteEdit}>
             X
           </button>
+          <button
+            className="Update-button"
+            onClick={() => this.setState({ editURL: "edit" })}
+          >
+            Update
+          </button>
+          {this.state.editURL === "edit" ? (
+            <EditURL
+              // id={id}
+              // key={element.id}
+              handleChange={this.handleChange}
+              afterURL={afterURL}
+              // update={this.updateEdit}
+              id={id}
+            />
+          ) : null}
         </section>
       </div>
     );
