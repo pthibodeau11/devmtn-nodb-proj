@@ -30,9 +30,7 @@ class ViewRequests extends Component {
   render() {
     let mappedEditList = this.state.allRequests.map(element => {
       return (
-        <div>
-          <Edit element={element} updateAllRequests={this.updateAllRequests} />
-        </div>
+        <Edit element={element} updateAllRequests={this.updateAllRequests} />
       );
     });
     return (

@@ -6,7 +6,7 @@ let editList = [
     email: "patrick.thibodeau@gmail.com",
     beforeURL:
       "https://images.unsplash.com/photo-1516724562728-afc824a36e84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
-    afterURL: "insert after URL here",
+    afterURL: "",
     comment: "Make this photo awesome!"
   }
 ];
@@ -54,7 +54,7 @@ function updateEdit(req, res) {
 
   editList[index] = {
     id: edit.id,
-    status: edit.status,
+    status: status,
     afterURL: afterURL || edit.afterURL,
     name: edit.name,
     email: edit.email,
