@@ -43,7 +43,7 @@ class App extends Component {
           </button>
         </nav>
         <main className="Body">
-          <Scrollbars style={{ width: 1150, height: 650 }}>
+          <Scrollbars style={{ width: 1150, height: 675 }}>
             {this.state.currentPage === "submit" ? (
               <NewRequest />
             ) : this.state.currentPage === "list" ? (

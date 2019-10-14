@@ -23,7 +23,7 @@
   margin: 0;
   margin-left: 10px;
   font-family: "Helvetica Neue", sans-serif;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .Right {
@@ -34,17 +34,57 @@
   height: 98%;
   width: 38%;
   justify-content: center;
+  color: grey;
+}
+
+.Email-Field {
+  margin-top: 1px;
+  color: grey;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.Status-Field {
+  margin-bottom: 10px;
+  color: grey;
+  font-family: "Roboto", sans-serif;
+}
+
+.Name-Field {
+  font-family: "Roboto", sans-serif;
+  color: grey;
+  font-size: 12px;
+}
+
+.Instructions {
+  font-family: "Roboto", sans-serif;
+  color: grey;
+  margin-top: 8px;
+  display: flex;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .Comment-Field {
-  border: solid 1px darkgrey;
+  border: solid 1px grey;
   height: 150px;
-  width: 342px;
+  width: 315px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  display: flex;
+  border-radius: 5px;
+  padding: 12px;
+  background-color: #455560;
+  box-shadow: 7px 10px 12px -5px rgb(0, 0, 0, 0.5);
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .FixedImgSize {
   width: 450px;
-  height: 287px;
+  height: 290px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +128,7 @@
   background-color: transparent;
   border: none;
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 600;
   margin-right: 8px;
 }

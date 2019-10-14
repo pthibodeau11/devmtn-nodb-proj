@@ -25,6 +25,7 @@ class EditURL extends Component {
       })
       .then(response => {
         console.log(response.data[0].afterURL);
+        this.props.updateAllRequests(response.data);
         this.setState({ afterURL: response.data[0].afterURL });
       })
       .catch(error => {

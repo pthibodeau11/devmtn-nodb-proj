@@ -19,6 +19,7 @@ class Edit extends Component {
       .get(`${this.props.element.beforeURL.replace("367/267", "info")}`)
       .then(response => {
         console.log(response.data.download_url);
+        // this.props.updateAllRequests(response.data);
         this.setState({ highRes: response.data.download_url });
       })
       .catch(error => {
@@ -44,10 +45,13 @@ class Edit extends Component {
       id
     } = this.props.element;
 
+    if (!beforeURL.includes("picsum")) {
+      this.state.highRes = beforeURL;
+    }
     return (
       <div className="Edit">
         <section className="Left">
-          {status}
+          <div>Click image to view high-res / download</div>
           <div className="FixedImgSize">
             <a href={`${this.state.highRes}` + ".jpg"} target="popup">
               <img className="Image" src={beforeURL} />
@@ -61,23 +65,14 @@ class Edit extends Component {
           </a>
         </section>
         <section className="Right">
-          Submitted by: {name}
-          <span className="Comment-Field">{comment}</span>
+          <span className="Status-Field">{status}</span>
+          <span Class="Name-Field">{name}</span>
+          <span className="Email-Field">{email}</span>
+          <span className="Instructions">Instructions:</span>
+          <textarea className="Comment-Field">{comment}</textarea>
           <a href={`${afterURL}`} target="popup">
             {afterURL}
           </a>
-          <span>{email}</span>
-        </section>
-        <section className="Button-Sec">
-          <button className="Delete-button" onClick={this.deleteEdit}>
-            X
-          </button>
-          {/* <button
-            className="Update-button"
-            onClick={() => this.setState({ editURL: "edit" })}
-          >
-            Update
-          </button> */}
           {this.state.editURL === "edit" ? (
             <EditURL
               // id={id}
@@ -86,6 +81,8 @@ class Edit extends Component {
               afterURL={afterURL}
               updateEdit={this.updateEdit}
               id={id}
+              updateAllRequests={this.props.updateAllRequests}
+              resetState={this.state.editURL}
             />
           ) : (
             <button
@@ -93,9 +90,14 @@ class Edit extends Component {
               onClick={() => this.setState({ editURL: "edit" })}
             >
               {" "}
-              + URL
+              Add / Update URL
             </button>
           )}
+        </section>
+        <section className="Button-Sec">
+          <button className="Delete-button" onClick={this.deleteEdit}>
+            X
+          </button>
         </section>
       </div>
     );
