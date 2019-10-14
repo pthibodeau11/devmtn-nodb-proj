@@ -1,0 +1,11 @@
+.Dropdown {
+  color: grey;
+  border: none;
+}
+
+.Dropdown-Items {
+  color: grey;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+}

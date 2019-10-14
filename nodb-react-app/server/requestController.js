@@ -64,9 +64,28 @@ function updateEdit(req, res) {
   res.status(200).json(editList);
 }
 
+function updateStatus(req, res) {
+  const { status } = req.body;
+  const updateID = req.params.id;
+  const index = editList.findIndex(element => element.id == updateID);
+  let edit = editList[index];
+
+  editList[index] = {
+    id: edit.id,
+    status: status || edit.status,
+    afterURL: afterURL || edit.afterURL,
+    name: edit.name,
+    email: edit.email,
+    beforeURL: edit.beforeURL,
+    comment: edit.comment
+  };
+  res.status(200).json(editList);
+}
+
 module.exports = {
   viewEdits,
   addEdit,
   removeEdit,
-  updateEdit
+  updateEdit,
+  updateStatus
 };

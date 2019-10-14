@@ -3,7 +3,8 @@ const {
   viewEdits,
   addEdit,
   removeEdit,
-  updateEdit
+  updateEdit,
+  updateStatus
 } = require("./requestController");
 const app = express();
 
@@ -15,5 +16,6 @@ app.get("/api/list", viewEdits);
 app.post("/api/list", addEdit);
 app.delete("/api/list/:id", removeEdit);
 app.put("/api/list/:id", updateEdit);
+app.put("/api/lists/:id", updateStatus);
 
 app.listen(PORT, () => console.log(`Server is listening on ${PORT}`));
