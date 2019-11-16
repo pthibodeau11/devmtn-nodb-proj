@@ -32,7 +32,7 @@ class Edit extends Component {
   deleteEdit = () => {
     axios.delete(`/api/list/${this.props.element.id}`).then(response => {
       console.log(response.data);
-      this.props.updateAllRequests(response.data);
+      // this.props.updateAllRequests(response.data);
     });
   };
 
