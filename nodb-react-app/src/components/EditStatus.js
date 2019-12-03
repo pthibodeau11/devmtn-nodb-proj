@@ -10,20 +10,14 @@ class EditStatus extends Component {
     };
 
     this.updateStatus = this.updateStatus.bind(this);
-
-    // this.edit = this.edit.bind(this);
   }
 
   updateStatus(e) {
-    console.log({ status: this.state.status });
-    // const { afterURL } = this.state;
-    // e.preventDefault();
     axios
       .put(`/api/lists/${this.props.id}`, {
         status: this.state.status
       })
       .then(response => {
-        console.log(this.state.status);
         this.props.updateAllRequests(response.data);
         this.setState({ status: this.state.status });
       })
@@ -34,13 +28,11 @@ class EditStatus extends Component {
 
   handleChange = event => {
     this.setState({ status: event.target.value });
-    console.log({ status: event.target.value });
   };
 
   render() {
     const { id, status } = this.props;
     // const { editing } = this.state;
-    console.log(status);
     return (
       <div className="Dropdown">
         <select

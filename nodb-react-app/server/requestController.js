@@ -36,7 +36,6 @@ function addEdit(req, res) {
 
 function removeEdit(req, res) {
   const { id } = req.params;
-  console.log(id);
   const index = editList.findIndex(element => {
     if (element.id == id) {
       return true;

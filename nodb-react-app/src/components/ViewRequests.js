@@ -19,7 +19,6 @@ class ViewRequests extends Component {
     axios
       .get("/api/list")
       .then(response => {
-        console.log(response.data);
         this.setState({ allRequests: response.data });
       })
       .catch(error => {

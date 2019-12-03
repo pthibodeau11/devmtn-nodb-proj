@@ -16,7 +16,6 @@ class EditURL extends Component {
   }
 
   updateEdit(e) {
-    console.log({ afterURL: e.target.value });
     // const { afterURL } = this.state;
     // e.preventDefault();
     axios
@@ -24,7 +23,6 @@ class EditURL extends Component {
         afterURL: e.target.value
       })
       .then(response => {
-        console.log(response.data[0].afterURL);
         this.props.updateAllRequests(response.data);
         this.setState({ afterURL: response.data[0].afterURL });
       })
@@ -35,7 +33,6 @@ class EditURL extends Component {
 
   handleChange = event => {
     this.setState({ afterURL: event.target.value });
-    console.log({ afterURL: event.target.value });
   };
 
   // edit(event) {
@@ -50,7 +47,6 @@ class EditURL extends Component {
   render() {
     const { id, afterURL } = this.props;
     // const { editing } = this.state;
-    console.log(id, afterURL);
     return (
       <div>
         <input

@@ -20,20 +20,13 @@ class Edit extends Component {
     axios
       .get(`${this.props.element.beforeURL.replace("367/267", "info")}`)
       .then(response => {
-        console.log(response.data.download_url);
-        // this.props.updateAllRequests(response.data);
         this.setState({ highRes: response.data.download_url });
       })
-      .catch(error => {
-        console.log(error);
-      });
+      .catch(error => {});
   }
 
   deleteEdit = () => {
-    axios.delete(`/api/list/${this.props.element.id}`).then(response => {
-      console.log(response.data);
-      // this.props.updateAllRequests(response.data);
-    });
+    axios.delete(`/api/list/${this.props.element.id}`).then(response => {});
   };
 
   render() {
